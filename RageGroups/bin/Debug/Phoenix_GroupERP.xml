@@ -1,0 +1,1236 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Phoenix_GroupERP
+</name>
+</assembly>
+<members>
+<member name="P:Phoenix_GroupERP.MenuCommand.IsUsable">
+	<summary>True when the user may run it right now (role rights are applied by switching items off).</summary>
+</member><member name="T:Phoenix_GroupERP.MenuCommand">
+	<summary>One clickable command from the main menu (a leaf menu item).</summary>
+</member><member name="E:Phoenix_GroupERP.MenuCatalog.CommandUsed">
+	<summary>Raised after a command was used (dashboard refreshes its "frequently used" row).</summary>
+</member><member name="M:Phoenix_GroupERP.MenuCatalog.CleanText(System.String)">
+	<summary>"&amp;Day Book" -&gt; "Day Book", "P &amp;&amp; L" -&gt; "P &amp; L".</summary>
+</member><member name="M:Phoenix_GroupERP.MenuCatalog.Collect(System.Windows.Forms.MenuStrip)">
+	<summary>All leaf commands of the menu, in menu order (includes unusable ones; check IsUsable).</summary>
+</member><member name="F:Phoenix_GroupERP.MenuCatalog.ShellTag">
+	<summary>Marker for the items the shell itself adds to the menu bar (excluded from the catalog).</summary>
+</member><member name="F:Phoenix_GroupERP.MenuCatalog.DefaultFavourites">
+	<summary>Commands shown on a brand-new installation, until real usage takes over.</summary>
+</member><member name="M:Phoenix_GroupERP.MenuCatalog.Frequent(System.Collections.Generic.List{Phoenix_GroupERP.MenuCommand},System.Int32)">
+	<summary>Most used usable commands (falls back to sensible defaults).</summary>
+</member><member name="M:Phoenix_GroupERP.MenuCatalog.Search(System.Collections.Generic.List{Phoenix_GroupERP.MenuCommand},System.String,System.Int32)">
+	<summary>
+ Ranks commands for a search query: every word must appear; title matches beat
+ path matches; prefix matches beat substrings; frequent commands float up.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.MenuCatalog">
+	<summary>
+ Reads the main MenuStrip into a flat list of commands (used by the dashboard
+ and the Ctrl+K search) and remembers how often each one is used, per Windows user.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet1.tmpCustTrialLastSuppDateDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet1.tmpCustTrialLastSuppDateRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet1.tmpCustTrialLastSuppDateRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet1TableAdapters.tmpCustTrialLastSuppDateTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet4.tmpTrialControlDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet4.tmpTrialControlRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet4.tmpTrialControlRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet4">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet4TableAdapters.tmpTrialControlTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedrep.tmpFeedRepDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedrep.tmpFeedRepRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedrep.tmpFeedRepRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedrep">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedrepTableAdapters.tmpFeedRepTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedstock.tmpStockTabDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedstock.tmpStockTabRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedstock.tmpStockTabRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedstock">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.feedstockTableAdapters.tmpStockTabTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInv.PrintInvDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInv.PrintInvRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInv.PrintInvRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInv">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInvTableAdapters.PrintInvTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.PrintInv,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.PrintInv,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.PrintInv,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.PrintInv)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.PrintInvTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Phoenix_GroupERP.sendsms">
+	<summary>
+ Summary description for sendsms
+ </summary>
+</member><member name="T:Phoenix_GroupERP.BmInv.InvPhxChickenDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.BmInv.InvPhxChickenRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.BmInv.InvPhxChickenRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.BmInv">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.BmInvTableAdapters.InvPhxChickenTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.BmInv,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.BmInv,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.BmInv,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.BmInv)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.BmInvTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate.asdfDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate.asdfRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate.asdfRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDateTableAdapters.asdfTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trial4day.tmpTrial4dateDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trial4day.tmpTrial4dateRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trial4day.tmpTrial4dateRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.trial4day">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trial4dayTableAdapters.tmpTrial4dateTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.CommandPalette.ShowFor(System.Windows.Forms.Form,System.Collections.Generic.List{Phoenix_GroupERP.MenuCommand},System.String)">
+	<summary>Shows the palette over <paramref name="owner"/>; runs the chosen command after it closes.</summary>
+</member><member name="T:Phoenix_GroupERP.CommandPalette">
+	<summary>
+ Ctrl+K / F3 "search everything" box: type a few letters of any menu command
+ (e.g. "led", "trial add", "sale reg") and press Enter to open it.
+ Respects role rights - disabled / hidden menu items never appear.
+ </summary>
+</member><member name="M:Phoenix_GroupERP.GridFill.Fill(System.Windows.Forms.DataGridView,System.Data.DataTable,System.Func{System.Data.DataRow,System.Object[]})">
+	<summary>
+ Replaces the rows of <paramref name="grid"/> with one row per DataRow of <paramref name="table"/>.
+ <paramref name="rowValues"/> returns the cell values for a row, in column order.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.GridFill">
+	<summary>
+ Fast filling of unbound DataGridViews.
+ The classic pattern
+     For i ... : grid.Rows.Add() : grid(0, i).Value = ... : grid(1, i).Value = ... : Next
+ makes the grid re-validate, re-size and re-paint after every single cell, which
+ takes seconds for a few thousand rows. GridFill builds all rows in memory and
+ adds them with ONE Rows.AddRange call while auto-sizing is paused.
+ The grid ends up with exactly the same rows and values.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5.feedsaleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5.feedsaleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5.feedsaleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5TableAdapters.feedsaleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno.ACC_HEAD_PHAG_0809DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno.ACC_HEAD_PHAG_0809Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno.ACC_HEAD_PHAG_0809RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobilenoTableAdapters.ACC_HEAD_PHAG_0809TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.frmFeedTransfer.PostBill(System.String)">
+	<summary>Posts one IU bill (all its lines) as one voucher in its own transaction; returns the voucher number.</summary>
+</member><member name="T:Phoenix_GroupERP.BrandPanel">
+	<summary>
+ Brand side panel used by the login screen (and any splash / about box):
+ deep-blue gradient, soft decorative rings, white logo tile, product name,
+ tag line and footer. Everything is painted - no images to scale, crisp at any DPI.
+ The theme engine leaves it alone (Tag = "NoTheme").
+ </summary>
+</member><member name="M:Phoenix_GroupERP.ThemedForm.OnPaint(System.Windows.Forms.PaintEventArgs)">
+	<summary>Borderless pop-ups (look-ups, search lists) get a crisp 1px frame.</summary>
+</member><member name="T:Phoenix_GroupERP.ThemedForm">
+	<summary>
+ Base class for every screen in Phoenix Group ERP.
+ Applies the modern theme right before the form's own Load handler runs,
+ so any colour the form sets in code at runtime still wins.
+ It is designer-safe: nothing happens inside the Visual Studio designer.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd.PrintDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd.PrintDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd.PrintDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsdTableAdapters.PrintDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.cashrevd.tmpCashRecDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.cashrevd.tmpCashRecRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.cashrevd.tmpCashRecRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.cashrevd">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.cashrevdTableAdapters.tmpCashRecTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.Warmup">
+	<summary>
+ Background warm-up started once the main window is open.
+ The first report screen used to stall for several seconds while Windows loaded the
+ large Crystal Reports libraries from disk. They are now loaded on a low-priority
+ background thread while the user is still on the dashboard. Nothing is shown,
+ nothing is changed - if anything fails, the screen simply loads them itself as before.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11.Purchase_DataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11.Purchase_DataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11.Purchase_DataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11TableAdapters.Purchase_DataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.DataSet11,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.DataSet11,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.DataSet11,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.DataSet11)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet11TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet2.tmpSalePurExpDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet2.tmpSalePurExpRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet2.tmpSalePurExpRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet2TableAdapters.tmpSalePurExpTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.exprep.exp_dayilyDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.exprep.exp_dayilyRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.exprep.exp_dayilyRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.exprep">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.exprepTableAdapters.exp_dayilyTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.Salerep.SaleRepFinalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.Salerep.SaleRepFinalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.Salerep.SaleRepFinalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.Salerep">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.SalerepTableAdapters.SaleRepFinalTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2.aaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2.aaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2.aaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2TableAdapters.aaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.FormTimings.RecordQuery(System.Int64)">
+	<summary>Called by GMod.DataSetRet / SqlExecuteNonQuery / Db after each database call.</summary>
+</member><member name="M:Phoenix_GroupERP.FormTimings.Write(System.Windows.Forms.Form,System.Int64,System.Int64,System.Int32,System.Int64)">
+	<summary>Appends one measurement (never throws).</summary>
+</member><member name="T:Phoenix_GroupERP.FormTimings">
+	<summary>
+ Measures how long every screen takes to open (from "New" until it is visible)
+ and how many database queries it ran while opening. One line per opening is
+ appended to %LOCALAPPDATA%\PhoenixGroupERP\logs\screen-open-times-yyyyMM.csv,
+ so the slowest screens can be found from real use and fixed one by one.
+ Switch off with  &lt;add key="UiLogScreenTimes" value="false"/&gt;  in app.config.
+ </summary>
+</member><member name="M:Phoenix_GroupERP.frmMDI.CleanCrystalTempFiles">
+	<summary>Deletes Crystal Reports' temporary *.rpt copies left in %TEMP% (never anything else).</summary>
+</member><member name="M:Phoenix_GroupERP.frmMDI.ChangeSession">
+	<summary>
+ Lets the user pick another assigned company and/or financial year; the main window closes and
+ frmlogin signs the same user in again to that company / session (same rules as a normal login).
+ </summary>
+</member><member name="T:Phoenix_GroupERP.partybankList.partybanklistDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.partybankList.partybanklistRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.partybankList.partybanklistRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.partybankList">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.partybankListTableAdapters.partybanklistTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.partybankList,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.partybankList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.partybankList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.partybankList)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.partybankListTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="M:Phoenix_GroupERP.MdiShell.Attach(System.Windows.Forms.Form,System.Windows.Forms.MenuStrip,System.Windows.Forms.StatusStrip,System.Windows.Forms.Control[])">
+	<summary>
+ Call once at the end of the main window's Load (after role rights were applied).
+ <paramref name="legacyBackground"/> = old decoration controls to hide (background picture, logo, labels).
+ </summary>
+</member><member name="M:Phoenix_GroupERP.MdiShell.SetChangeSession(System.Windows.Forms.Form,System.Windows.Forms.MethodInvoker)">
+	<summary>
+ Registers the main window's Change Session routine: offered in the user menu (for every role)
+ and on the dashboard's financial-year chip.
+ </summary>
+</member><member name="M:Phoenix_GroupERP.MdiShell.ShowSearch(System.Windows.Forms.Form,System.String)">
+	<summary>Opens the command search for the given main window.</summary>
+</member><member name="T:Phoenix_GroupERP.MdiShell">
+	<summary>
+ Turns the existing main window (frmMDI) into the modern shell:
+  * home dashboard instead of the stretched background picture,
+  * Ctrl+K / F3 command search (also: just start typing on the dashboard),
+  * search box and user menu on the right of the menu bar,
+  * clean status bar (server date | company | FY | user | version).
+ Nothing in frmMDI's menu logic changes - the shell only reads the menu.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7.hdfinalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7.hdfinalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7.hdfinalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7TableAdapters.hdfinalTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary.hathsummaryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary.hathsummaryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary.hathsummaryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummaryTableAdapters.hathsummaryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.frmlogin.ReLoginToSession(System.String,System.String)">
+	<summary>Signs the same user in again to another company and/or session (used by Change company / session).</summary>
+</member><member name="T:Phoenix_GroupERP.BankBook.repGeneralLedgerDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.BankBook.repGeneralLedgerRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.BankBook.repGeneralLedgerRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.BankBook">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.BankBookTableAdapters.repGeneralLedgerTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.chqrep.tmpChqRepDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.chqrep.tmpChqRepRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.chqrep.tmpChqRepRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.chqrep">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.chqrepTableAdapters.tmpChqRepTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_data.CRPrintDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_data.CRPrintRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_data.CRPrintRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_data">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_dataTableAdapters.CRPrintTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.CrPrint_data,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.CrPrint_data,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.CrPrint_data,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.CrPrint_data)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.CrPrint_dataTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10.DisburRegDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10.DisburRegRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10.DisburRegRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10TableAdapters.DisburRegTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.DataSet10,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.DataSet10,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.DataSet10,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.DataSet10)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet10TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Phoenix_GroupERP.salexpur.tmpSalePurExpDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.salexpur.tmpSalePurExpRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.salexpur.tmpSalePurExpRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.salexpur">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.salexpurTableAdapters.tmpSalePurExpTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.ThemeManager.ApplyTheme(System.Windows.Forms.Form)">
+	<summary>Themes a complete form (called automatically by ThemedForm.OnLoad).</summary>
+</member><member name="M:Phoenix_GroupERP.ThemeManager.ApplyTheme(System.Windows.Forms.Control)">
+	<summary>Themes a single control tree (e.g. a control created at runtime).</summary>
+</member><member name="M:Phoenix_GroupERP.ThemeManager.MapFont(System.Drawing.Font)">
+	<summary>Returns the Segoe UI equivalent of a legacy font (cached, never disposed).</summary>
+</member><member name="M:Phoenix_GroupERP.ThemeManager.EnableDoubleBuffer(System.Windows.Forms.Control)">
+	<summary>Turns on double buffering for any control (big win for grids and list views).</summary>
+</member><member name="T:Phoenix_GroupERP.ThemeManager">
+	<summary>
+ Applies the modern look to any form at runtime, without touching the
+ 250+ designer files one by one.
+
+ Rules (all colours come from <see cref="T:Phoenix_GroupERP.AppTheme"/>):
+  * Form / panels      : legacy pastel backgrounds -&gt; neutral surface / white cards,
+                         dark bands (title bars)  -&gt; brand blue with white text.
+  * Labels             : inherit the background; red/green/blue meaning is kept.
+  * Inputs             : white, flat single border, soft focus highlight;
+                         loud "attention" colours become a soft amber highlight.
+  * Buttons            : flat; Save/Login/OK/Show... become primary (blue),
+                         Delete/Remove become danger (red outline).
+  * DataGridView       : flat header, light grid lines, zebra rows,
+                         double-buffered for fast scrolling.
+  * Menus / tool strips: <see cref="T:Phoenix_GroupERP.ModernToolStripRenderer"/>.
+  * Legacy fonts (MS Sans Serif, Verdana, Tahoma, Arial...) -&gt; Segoe UI,
+    same size and style so layouts do not move.
+
+ Opt-out: set a form's or control's Tag to "NoTheme", or put
+ &lt;add key="UiTheme" value="Classic"/&gt; in app.config.
+ </summary>
+</member><member name="P:Phoenix_GroupERP.AppTheme.ComboBack">
+	<summary>
+ Background of combo boxes (darker than text boxes so drop-downs stand out).
+ Override in app.config:  &lt;add key="UiComboBack" value="#CFDDED"/&gt;  (or "207,221,237").
+ </summary>
+</member><member name="M:Phoenix_GroupERP.AppTheme.Luminance(System.Drawing.Color)">
+	<summary>Relative luminance 0 (black) .. 1 (white).</summary>
+</member><member name="M:Phoenix_GroupERP.AppTheme.Saturation(System.Drawing.Color)">
+	<summary>HSV saturation 0..1.</summary>
+</member><member name="M:Phoenix_GroupERP.AppTheme.MapForeground(System.Drawing.Color,System.Drawing.Color)">
+	<summary>
+ Maps a legacy foreground colour onto the palette while keeping its meaning
+ (red stays "danger", green stays "success", blue stays "primary"...).
+ </summary>
+</member><member name="T:Phoenix_GroupERP.AppTheme">
+	<summary>
+ Central design tokens for the Phoenix Group ERP user interface.
+ Every colour / font used by the modern look lives here so the whole
+ application can be re-branded from one place.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet8.INVINFO_PHFA_0910DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet8.INVINFO_PHFA_0910Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet8.INVINFO_PHFA_0910RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet8">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet8TableAdapters.INVINFO_PHFA_0910TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="F:Phoenix_GroupERP.GMod.SwitchToSession">
+	<summary>Set by Change Session: the main window closes and the login re-opens the app in this session.</summary>
+</member><member name="F:Phoenix_GroupERP.GMod.SwitchToCompany">
+	<summary>Company (Cmp_id) to open together with <see cref="F:Phoenix_GroupERP.GMod.SwitchToSession"/>.</summary>
+</member><member name="M:Phoenix_GroupERP.GMod.OpenSharedConnection">
+	<summary>
+ Opens the shared connection with the current <see cref="F:Phoenix_GroupERP.GMod.Connstr"/>.
+ Unlike the self-healing getter, this throws the real error (used by the login screen).
+ </summary>
+</member><member name="M:Phoenix_GroupERP.GMod.Q(System.String)">
+	<summary>Doubles single quotes so a value can be embedded in a T-SQL string literal.</summary>
+</member><member name="M:Phoenix_GroupERP.GMod.ShutdownConnection">
+	<summary>Call once when the application exits (closes the shared connection for good).</summary>
+</member><member name="F:Phoenix_GroupERP.GMod.QueryTimeoutSeconds">
+	<summary>Timeout (seconds) for read queries - large reports no longer stop at the 30 s default.</summary>
+</member><member name="M:Phoenix_GroupERP.GMod.DataSetRet(System.String,System.String)">
+	<summary>
+ Runs a SELECT and stores the result in GMod.ds under <paramref name="tablename"/>.
+ Optimised version:
+  * one round-trip with a forward-only reader (no intermediate copies);
+  * if the table already exists with the same columns it is refilled in place,
+    so controls bound to it refresh automatically (same as before);
+  * if the columns differ, the table is replaced. Previously old columns were kept
+    and piled up, so Rows(0)(0) could point at a stale, empty column;
+  * multiple result sets keep the old naming (name, name1, name2 ...).
+ </summary>
+</member><member name="F:Phoenix_GroupERP.GMod.ServerClockRefresh">
+	<summary>How long the measured server/PC clock difference is trusted.</summary>
+</member><member name="M:Phoenix_GroupERP.GMod.ServerNow">
+	<summary>
+ Current SQL Server date/time. The server is asked at most once every
+ 10 minutes; in between, the value is derived from the local clock plus
+ the measured offset (accurate to a few milliseconds).
+ </summary>
+</member><member name="M:Phoenix_GroupERP.GMod.ResetServerClock">
+	<summary>Forces the next ServerNow() to re-read the server clock.</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.Add_24x24">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.Cancel_24x24">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.Delete_32x32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.Edit_32x32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.images">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.Print">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.pss">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.pssinfo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.phoenix_logo">
+	<summary>
+  Phoenix Group logo (used on the login screen and the main window header).
+</summary>
+</member><member name="T:Phoenix_GroupERP.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Phoenix_GroupERP.My.MyApplication.WriteErrorLog(System.Exception)">
+	<summary>Appends the error to %LOCALAPPDATA%\PhoenixGroupERP\logs\errors-yyyyMM.log; returns the path (or Nothing).</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint.tmpprodintDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint.tmpprodintRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint.tmpprodintRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetintTableAdapters.tmpprodintTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.Dpi">
+	<summary>Pixel scaling for controls created in code (designer controls are auto-scaled by WinForms).</summary>
+</member><member name="T:Phoenix_GroupERP.ModuleColors">
+	<summary>Accent colours used to tell the modules apart.</summary>
+</member><member name="P:Phoenix_GroupERP.DashboardView.SessionChipClickable">
+	<summary>When True the financial-year chip in the header opens Change Session.</summary>
+</member><member name="M:Phoenix_GroupERP.DashboardView.RefreshFrequentIfNeeded">
+	<summary>Called by the shell when the main window is activated again.</summary>
+</member><member name="T:Phoenix_GroupERP.ModernToolStripRenderer">
+	<summary>
+ Flat, professional renderer for MenuStrip / ToolStrip / StatusStrip / ContextMenuStrip.
+ Top-level main menu = dark brand bar, drop-downs = clean white cards.
+ Brushes and pens are cached, so painting large menus stays cheap.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.ModernColorTable">
+	<summary>Colour table used by the professional renderer for anything we do not paint ourselves.</summary>
+</member><member name="M:Phoenix_GroupERP.SessionPicker.Describe(System.String)">
+	<summary>"2526" -&gt; "FY 2025-26"</summary>
+</member><member name="M:Phoenix_GroupERP.SessionPicker.Pick(System.Windows.Forms.IWin32Window,System.String@,System.String@)">
+	<summary>Shows the dialog. Returns True and the chosen company id / session, or False when cancelled.</summary>
+</member><member name="T:Phoenix_GroupERP.SessionPicker">
+	<summary>
+ "Change company / session" dialog. Lists the companies assigned to the
+ signed-in user (Cmp_assignment) and the financial years he may open
+ (SessionMaster); returns the chosen combination.
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3.tmpTrial4dateDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3.tmpTrial4dateRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3.tmpTrial4dateRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3TableAdapters.tmpTrial4dateTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6.HAtchReportDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6.HAtchReportRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6.HAtchReportRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6TableAdapters.HAtchReportTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9.audit_stockDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9.audit_stockRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9.audit_stockRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9TableAdapters.audit_stockTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.CustomRenderer">
+	<summary>
+ Kept for backward compatibility: any code that still does
+ "strip.Renderer = New CustomRenderer" now gets the modern renderer
+ (previous-session menus are still highlighted in amber).
+ </summary>
+</member><member name="M:Phoenix_GroupERP.Db.GetTable(System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>Runs a SELECT and returns a new DataTable.</summary>
+</member><member name="M:Phoenix_GroupERP.Db.Fill(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>Runs a SELECT and stores the result in GMod.ds (same contract as GMod.DataSetRet).</summary>
+</member><member name="M:Phoenix_GroupERP.Db.Scalar(System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>First column of the first row (Nothing when there are no rows).</summary>
+</member><member name="M:Phoenix_GroupERP.Db.Execute(System.String,System.Data.SqlClient.SqlParameter[])">
+	<summary>INSERT / UPDATE / DELETE on its own pooled connection. Returns rows affected.</summary>
+</member><member name="T:Phoenix_GroupERP.Db">
+	<summary>
+ Small, fast, parameterised data-access helper.
+ Use it for new code instead of building SQL with string concatenation:
+ parameters are safe against SQL injection, let SQL Server re-use query
+ plans (faster) and avoid date-format problems.
+
+ Example:
+   Dim t = Db.GetTable("select * from Usertab4 where uname=@u", Db.P("@u", txtuname.Text))
+   Dim n = CInt(Db.Scalar("select count(*) from Vtype where session=@s", Db.P("@s", GMod.Session)))
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12.pageingDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12.pageingRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12.pageingRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12TableAdapters.pageingTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.DataSet12,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.DataSet12,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.DataSet12,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.DataSet12)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet12TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetchkbw.bwrepfunDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetchkbw.bwrepfunRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetchkbw.bwrepfunRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetchkbw">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetchkbwTableAdapters.bwrepfunTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1ph.gstr1phDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1ph.gstr1phRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1ph.gstr1phRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1ph">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1phTableAdapters.gstr1phTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager.UpdateUpdatedRows(Phoenix_GroupERP.gstr1ph,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager.UpdateInsertedRows(Phoenix_GroupERP.gstr1ph,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager.UpdateDeletedRows(Phoenix_GroupERP.gstr1ph,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager.UpdateAll(Phoenix_GroupERP.gstr1ph)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Phoenix_GroupERP.gstr1phTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>
