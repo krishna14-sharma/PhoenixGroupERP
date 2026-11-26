@@ -413,6 +413,12 @@
     </Compile>
     <Compile Include="CustomRenderer.vb" />
     <Compile Include="Data\Db.vb" />
+    <Compile Include="NewAmedment\Reports\frmBOIRtgs.designer.vb">
+      <DependentUpon>frmBOIRtgs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\frmBOIRtgs.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\AppTheme.vb" />
     <Compile Include="UI\ModernToolStripRenderer.vb" />
     <Compile Include="UI\ThemeManager.vb" />
@@ -3693,6 +3699,9 @@
     <EmbeddedResource Include="NewAmedment\Reports\frmBillDetialsSale.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmBillDetialsSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\frmBOIRtgs.resx">
+      <DependentUpon>frmBOIRtgs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\frmDailyPaymentRepot.resx">
       <SubType>Designer</SubType>

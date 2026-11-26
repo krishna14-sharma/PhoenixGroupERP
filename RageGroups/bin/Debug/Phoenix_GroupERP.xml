@@ -849,6 +849,46 @@ Represents the connection and commands used to retrieve and save data.
  Opt-out: set a form's or control's Tag to "NoTheme", or put
  &lt;add key="UiTheme" value="Classic"/&gt; in app.config.
  </summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.ApplyRemitterDefaults">
+	<summary>
+ Our (debit) account for "As per details below by debiting my / our account":
+   1. Party Bank Details saved against the bank account head (partyCode = bank head code),
+   2. the number typed here before (remembered per bank account),
+   3. the account number written in the bank head's name, e.g. "BANK OF INDIA CC A/C 940520110000028".
+ </summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.AccountNoFromName(System.String)">
+	<summary>Longest run of 9+ digits in the account head name (bank heads often carry the A/c number).</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.FindVoucherParty(System.String,System.String,System.String,System.Decimal,System.String)">
+	<summary>
+ Party paid by the voucher: its debit line in dummy_ventry (unposted) or the posted ledger table,
+ preferring the line whose amount equals the cheque; last resort the "favour of" name.
+ </summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.LoadPartyBanks(System.String,System.String)">
+	<summary>Loads the party's account(s) from partyBankDetials; a party may have more than one.</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.AmountInWords(System.Decimal)">
+	<summary>"Rupees Seventy Five Lakh Only" using the same converter as the HDFC slip.</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.IndianAmount(System.Decimal)">
+	<summary>Indian grouping: 7500000 -&gt; 75,00,000.00</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.IfscDisplay(System.String)">
+	<summary>IFSC printed as on the bank's sample: "HDFC 0001282".</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.picPreview_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+	<summary>On-screen preview of the A4 landscape page (needs no printer).</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.RenderTo(System.Drawing.Graphics,System.Single,System.Single,System.Single)">
+	<summary>Draws the form in pixel units: k = pixels per mm, (x0, y0) = the table's top-left corner.</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.RenderForm(System.Drawing.Graphics)">
+	<summary>The complete RTGS format: table, wording and values.</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.DrawFrom(System.Drawing.Graphics,System.Drawing.Brush,System.Drawing.Font,System.Drawing.Font,System.String,System.Single,System.Single,System.Single,System.Single)">
+	<summary>"From ......Phoenix Poultry, Jabalpur" - the remitter in a larger bold face.</summary>
+</member><member name="M:Phoenix_GroupERP.frmBOIRtgs.DrawCell(System.Drawing.Graphics,System.String,System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Boolean)">
+	<summary>Word-wrapped text inside a cell, shrunk if it does not fit.</summary>
+</member><member name="T:Phoenix_GroupERP.frmBOIRtgs">
+	<summary>
+ Bank of India RTGS application ("MM RTGS" format: counterfoil on the left, application on the right).
+ The whole format - table, wording and values - is printed on plain A4 landscape paper.
+ Pick the bank voucher; the beneficiary's bank, branch, IFSC and account number come from
+ Party Bank Details (partyBankDetials). Our own details (account no., address, mobile, signatory,
+ BOI branch) are typed once and remembered on this PC.
+ </summary>
 </member><member name="P:Phoenix_GroupERP.AppTheme.ComboBack">
 	<summary>
  Background of combo boxes (darker than text boxes so drop-downs stand out).

@@ -2301,8 +2301,6 @@ D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\bin\Debug\Phoenix_GroupERP.exe.config
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Interop.VBIDE.dll
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.ResolveComReference.cache
-C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.xml
-C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\bin\Debug\Phoenix_GroupERP.exe
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\bin\Debug\Phoenix_GroupERP.pdb
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\bin\Debug\Phoenix_GroupERP.xml
@@ -2500,6 +2498,7 @@ C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_Gr
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmXlsToVoucher.resources
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.AgeingForm.resources
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmBillDetialsSale.resources
+C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmBOIRtgs.resources
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyPaymentRepot.resources
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburmentReg.resources
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburRegRep.resources
@@ -2554,3 +2553,5 @@ C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_Gr
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWithDiscountOnAmout.resources
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.GenerateResource.Cache
 C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe
+C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.xml
+C:\Users\Administrator\Downloads\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb

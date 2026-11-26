@@ -1685,4 +1685,9 @@ Public Class frmMDI
         Dim t As New frmDailyBalance
         t.ShowDialog()
     End Sub
+
+    Private Sub BOIRtgsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BOIRtgsToolStripMenuItem.Click
+        Dim t As New frmBOIRtgs
+        t.ShowDialog()
+    End Sub
 End Class

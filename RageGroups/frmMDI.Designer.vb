@@ -287,6 +287,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BOIRtgsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1208,7 +1209,7 @@ Partial Class frmMDI
         '
         'BankToolStripMenuItem1
         '
-        Me.BankToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HDFCRtgsToolStripMenuItem})
+        Me.BankToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HDFCRtgsToolStripMenuItem, Me.BOIRtgsToolStripMenuItem})
         Me.BankToolStripMenuItem1.Name = "BankToolStripMenuItem1"
         Me.BankToolStripMenuItem1.Size = New System.Drawing.Size(269, 22)
         Me.BankToolStripMenuItem1.Text = "Bank"
@@ -1216,7 +1217,7 @@ Partial Class frmMDI
         'HDFCRtgsToolStripMenuItem
         '
         Me.HDFCRtgsToolStripMenuItem.Name = "HDFCRtgsToolStripMenuItem"
-        Me.HDFCRtgsToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.HDFCRtgsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.HDFCRtgsToolStripMenuItem.Text = "HDFC Rtgs"
         '
         'ToolStripMenuItem21
@@ -1981,6 +1982,12 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
+        'BOIRtgsToolStripMenuItem
+        '
+        Me.BOIRtgsToolStripMenuItem.Name = "BOIRtgsToolStripMenuItem"
+        Me.BOIRtgsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BOIRtgsToolStripMenuItem.Text = "BOI Rtgs"
+        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2283,4 +2290,5 @@ Partial Class frmMDI
     Friend WithEvents FeedTransferIUToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MonthlyDrTrailToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DailyBalanceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BOIRtgsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
